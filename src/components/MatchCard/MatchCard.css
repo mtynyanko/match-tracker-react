@@ -1,0 +1,48 @@
+.card {
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0B0E12;
+  color: #ffffff;
+  padding: 16px 36px;
+  border-radius: 4px;
+}
+.team {
+  display: flex;
+  gap: 14px;
+}
+.team-icon {
+  width: 48px;
+  height: 48px;
+}
+.team-name {
+  font-weight: 600;
+  font-size: 16px;
+}
+.score {
+  display: flex;
+  flex-direction: column;
+}
+.score-tab {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  font-weight: 600px;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+.score-status {
+  background-color: #43AD28;
+  width: 97px;
+  height: 27px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12px;
+}
+.score-number {
+  margin: 0px;
+}
