@@ -1,4 +1,37 @@
 .header {
+  margin: 10px 42px 0px 42px;
+  width: 90%;
   display: flex;
   color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  font-family: 'Tactic Sans', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 32px;
+  margin: 0px;
+}
+.refresh-button {
+  color: #ffffff;
+  background-color: #EB0237;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 204px;
+  height: 56px;
+  gap: 10px;
+  border: 0px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.refresh-button:hover {
+  background-color: #A01131;
+}
+.refresh-button:active {
+  background-color: #701328;
+  color: #787878;
 }
