@@ -6,6 +6,10 @@
   justify-content: space-between;
   align-items: center;
 }
+.side-content {
+  display: flex;
+  gap: 12px;
+}
 .title {
   font-family: 'Tactic Sans', sans-serif;
   font-weight: 400;
