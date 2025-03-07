@@ -1,23 +1,25 @@
 import { useEffect } from "react";
 import Header from "../../components/Header/Header";
 import MatchContainer from "../../components/MatchContainer/MatchContainer";
-import { getMatches } from "../../api/apiMatches";
+import { MyDispatch, useTypedSelector } from "../../redux/store";
+import { useDispatch } from "react-redux";
+import { requestMatchesInfo } from "../../redux/actions/matchActions";
+import LoadScreen from "../../components/LoadScreen/LoadScreen";
 import "./MainPage.css";
 
-
 const MainPage = () => {
-  useEffect(() => {
-    getMatches()
-    .then(response => {
-      console.log(response.data.data.matches)
-    })
-  })
+  const dispatch: MyDispatch = useDispatch()
+  const isLoading = useTypedSelector((state) => state.matches.isLoading);
 
+  useEffect(() => {
+    dispatch(requestMatchesInfo())
+  }, [dispatch])
 
   return (
     <div className="main-page">
       <Header />
-      <MatchContainer />
+      {isLoading && <LoadScreen />}
+      {!isLoading && <MatchContainer />}
     </div>
   )
 };

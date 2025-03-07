@@ -8,7 +8,8 @@ import { MATCHES_REQUEST } from "../../types/constants";
 function* fetchMatches() {
   try {
     const response: AxiosResponse<IMatchInfo[]> = yield call(getMatches);
-    yield put(fetchMatchesInfoSuccess(response.data))
+    console.log(response.data.data.matches)
+    yield put(fetchMatchesInfoSuccess(response.data.data.matches))
   } catch (error) {
     const currentError = error instanceof AxiosError;
     yield currentError

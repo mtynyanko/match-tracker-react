@@ -1,11 +1,15 @@
 import errorIcon from "../../assets/icons/alert-triangle.svg"
 import "./ErrorNotice.css"
 
-const ErrorNotice = () => {
+interface ErrorProps {
+  message: string;
+}
+
+const ErrorNotice = ({ message }: ErrorProps) => {
   return (
     <div className="error-card">
       <img src={errorIcon} alt="alert-icon" className="error-icon" />
-      <p className="error-message">Ошибка: не удалось загрузить информацию</p>
+      <p className="error-message">{"Oшибка: "+message}</p>
     </div>
   );
 };

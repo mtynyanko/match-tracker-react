@@ -27,6 +27,8 @@ const matchReducer = (state = initialState, action: MatchAction): IMatchesState 
         error: action.payload,
         isLoading: false,
       };
+    default:
+      return state;
   };
 };
 export default matchReducer;
